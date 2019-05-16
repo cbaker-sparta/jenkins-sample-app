@@ -1,0 +1,37 @@
+Automation servers	
+
+			            deliver            deploy                   _
+				      for               for                      |
+Start ----> build ----> test ----> development ----> production ----> end        |  CI	
+                         |            continuous delivery             |          |
+			  ---------------------------------------------          |
+				     continuous deployment			-
+
+On premise
+/ cloud
+
+CI - Continuous Integration 
+CD - Continuous Devlivery
+CD - Continuous Deployment -> Only if is completely automated
+
+
+-> everything has to be virtual and automated -> cannot automate physical
+- SDLC (Software Development Life Cycle) - all the stages of development before it is usable by user.
+-> normally done manually, but DevOps is trying to make these processes automated through virtual environments.
+-> when your feature code is ready to be moved to dev, we must find a way to test that code to make sure the code does not break dev code -> we can test this without human interaction by creating an automated test server. -> This is known as Continuous Integration. ** KEY **
+
+- Jenkins is the most popular automated test server. -> open source, that automatically tests code as pushed using a feature called 'web hooks', if it fails will return error to user, otherwise will pass and be accepted and integrated into branch.
+-> merge conflicts will be reported as an error, which then will need to be manually resolved between team.
+-> Jenkins test parameters should be defined by your tests teams.
+
+- Multiple test levels, testing your feature, then testing your merge into dev to see how it works as a whole.
+
+-> reason we have multiple branches is so we will always have some working code to show customer/product owner, and then we can continuously add features to it -> This provides continuous delivery of a product.
+   -->> NEVER have broken code in master or you will be FIRED.
+
+-> If all of this is automated, it is then continuous deployment.
+
+- Jenkins essentially works as its own OS, can be set with all types of automated process, not just testing. -> most companies just use it as the standard automation tool, not even for testing. -> can be set to automatically notify someone when some code is pulled, a page is accessed, etc.
+- When creating a project, the name must always be as detailed as possible.
+
+-> build triggers defines what events will trigger defined actions/alerts.
